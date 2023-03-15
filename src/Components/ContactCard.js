@@ -2,7 +2,7 @@ import React from "react";
 import user from "../images/Hair.jpg"
 const ContactCard=(props)=>{
     const {id,name,email }=props.contact;
-    console.log(props.conatact);
+    console.log(props.conatact);  
 return(
 <div className="item">
 <img className="ui avatar image" src={user} />

@@ -36,7 +36,7 @@ email:""
             <label>Email</label>
              <input type="text" name="email" placeholder="Email"
              value={this.state.email}
-              onChange={(e)=>this.setState({name:e.target.email})} />
+              onChange={(e)=>this.setState({email:e.target.email})} />
             </div>
             <button className="ui button blue">Add</button>
         </form>

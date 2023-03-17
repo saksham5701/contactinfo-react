@@ -1,8 +1,5 @@
 import React from "react";
 
-// We will be using class components here
-// This comonent is to provide the user with a form to add details
-
 class AddContact extends React.Component{
   state={
 name:"",
@@ -36,7 +33,7 @@ email:""
             <label>Email</label>
              <input type="text" name="email" placeholder="Email"
              value={this.state.email}
-              onChange={(e)=>this.setState({email:e.target.email})} />
+              onChange={(e)=>this.setState({email:e.target.value})} />
             </div>
             <button className="ui button blue">Add</button>
         </form>

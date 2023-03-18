@@ -46,8 +46,9 @@ function App() {
     <div className="ui container">
     <Router>
     <Header/>
+    
     <Routes>
-    <Route path="/add" element={<AddContact/>} />
+    <Route path="/add" exact element={<AddContact/>} />
     <Route path="/" element={<ContactList/>} />
     </Routes>
     {/* <AddContact addContactHandler={addContactHandler}/>

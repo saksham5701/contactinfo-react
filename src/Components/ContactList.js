@@ -8,8 +8,8 @@ const ContactList =(props)=>{
     const deletecontact=(id)=>{
         props.getelementid(id);
         };
-        const contacts=[{id:"1",name:"Saksham",email:"saksham5701@gmail.com",},{id:"2",name:"Saksham",email:"saksham5701@gmail.com",},{id:"3",name:"Saksham",email:"saksham5701@gmail.com",}];
-    const rendercontactlist=contacts.map((contact)=>{
+        // const contacts=[{id:"1",name:"Saksham",email:"saksham5701@gmail.com",},{id:"2",name:"Saksham",email:"saksham5701@gmail.com",},{id:"3",name:"Saksham",email:"saksham5701@gmail.com",}];
+    const rendercontactlist=props.contacts.map((contact)=>{
         return(
               <ContactCard contact={contact} clickHandler={deletecontact} key={contact.id}></ContactCard>
         );

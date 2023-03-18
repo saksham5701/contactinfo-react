@@ -41,6 +41,7 @@ function App() {
   {
       localStorage.setItem('lists',JSON.stringify(contacts));
   },[contacts]);
+  // const AddContact=NewHOC(contacts);
   return (
     
     <div className="ui container">
@@ -48,10 +49,10 @@ function App() {
     <Header/>
     
     <Routes>
-    <Route path="/add" exact element={<AddContact/>} />
-    <Route path="/" element={<ContactList/>} />
+    <Route path="/add" exact Component={()=> <AddContact addContactHandler={addContactHandler}/>} />
+    <Route path="/" Component={ ()=> <ContactList contacts={contacts} getelementid={removeContactHandler} />} />
     </Routes>
-    {/* <AddContact addContactHandler={addContactHandler}/>
+    {/* <AddContact addContactHandler={addContactHandler} />
     <ContactList contacts={contacts} getelementid={removeContactHandler}/>  */}
     {/* passing props contacts property, contacts array */}
     </Router>

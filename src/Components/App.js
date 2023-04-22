@@ -44,7 +44,7 @@ function App() {
         <Routes>
           <Route path="/add" element={<AddContact addContactHandler={addContactHandler} />} />
           <Route path="/" element={<ContactList contacts={contacts} getelementid={removeContactHandler} />} />
-          <Route path="/contact/:id" component={ContactDetail} />
+          <Route path="/contact/:id"  element={<ContactDetail/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
